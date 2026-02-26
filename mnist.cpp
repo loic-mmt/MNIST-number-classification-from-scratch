@@ -381,7 +381,7 @@ static bool train_nn(const MnistData& data, const double dropout_percent, NNMode
     }
 
     arma::arma_rng::set_seed(1);
-    const int iters = 5000;
+    const int iters = 6000;
     const double alpha = 0.05;
     const arma::uword hidden = 128;
     const arma::uword n_classes = 10;
@@ -567,7 +567,7 @@ int main()
         return 1;
     }
     if (!write_submission_csv(test_data.ids, y_pred, "data/submission_cpp.csv")) { return 1; }
-    std::cout << "submission.csv written\n";
+    std::cout << "submission_cpp.csv written\n";
 
     return 0;
 
