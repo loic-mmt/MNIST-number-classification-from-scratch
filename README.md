@@ -23,10 +23,7 @@ Le notebook est une version Python/Numpy, organisee en étapes:
    - suivi de l'accuracy train par epoch,
    - sauvegarde des meilleurs poids/biais (`best`).
 
-4. Cellule experimentale supplementaire:
-   - deuxieme bloc d'entrainement pour tester une variante (basee sur `syn0/syn1`).
-
-5. Prediction et soumission:
+4. Prediction et soumission:
    - applique le modele sauvegardé sur le test,
    - crée `submission.csv` avec les colonnes `id,label`.
 

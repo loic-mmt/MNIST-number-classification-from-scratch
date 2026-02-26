@@ -381,9 +381,9 @@ static bool train_nn(const MnistData& data, const double dropout_percent, NNMode
     }
 
     arma::arma_rng::set_seed(1);
-    const int iters = 4000;
+    const int iters = 5000;
     const double alpha = 0.05;
-    const arma::uword hidden = 64;
+    const arma::uword hidden = 128;
     const arma::uword n_classes = 10;
     const arma::uword n_samples = data.X.n_rows;
     const double keep_prob = 1.0 - dropout_percent;
