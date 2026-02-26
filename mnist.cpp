@@ -126,7 +126,7 @@ struct NNModel {
 
 static std::ifstream open_mnist_file() {
     // Shape: (30000, 787)
-    std::ifstream file("train_mnist.csv");
+    std::ifstream file("data/train_mnist.csv");
     if (!file) {
         std::cerr << "Cannot open file\n";
     }
@@ -135,7 +135,7 @@ static std::ifstream open_mnist_file() {
 
 static std::ifstream open_test_mnist_file() {
     // Shape: (40000, 786)
-    std::ifstream file("test_mnist.csv");
+    std::ifstream file("data/test_mnist.csv");
     if (!file) {
         std::cerr << "Cannot open file\n";
     }
@@ -566,7 +566,7 @@ int main()
         std::cerr << "Prediction size mismatch\n";
         return 1;
     }
-    if (!write_submission_csv(test_data.ids, y_pred, "submission_cpp.csv")) { return 1; }
+    if (!write_submission_csv(test_data.ids, y_pred, "data/submission_cpp.csv")) { return 1; }
     std::cout << "submission.csv written\n";
 
     return 0;
